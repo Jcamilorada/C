@@ -5,12 +5,6 @@ struct queue
 {
     Node * head;
     Node * tail;
-};
-
-struct queue
-{
-    Node * head;
-    Node * tail;
     
     void (*enqueue)(struct queue *, int);
     int (*dequeue)(struct queue *);
@@ -59,7 +53,7 @@ int dequeue (Queue *myQueue)
     return value;
 }
 
-Queue * constructor()
+Queue* constructor()
 {
     Queue * myQueue = (Queue*)malloc(sizeof(Queue));
     myQueue->enqueue = enqueue;
